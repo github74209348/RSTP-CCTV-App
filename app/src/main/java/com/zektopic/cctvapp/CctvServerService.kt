@@ -1408,8 +1408,8 @@ class CctvServerService : Service(), ConnectChecker, SurfaceHolder.Callback {
         
         val layoutParams = openGlView.layoutParams as WindowManager.LayoutParams
         if (showPreview) {
-            layoutParams.width = WindowManager.LayoutParams.MATCH_PARENT
-            layoutParams.height = WindowManager.LayoutParams.MATCH_PARENT
+             layoutParams.width = resources.displayMetrics.widthPixels
+             layoutParams.height = resources.displayMetrics.heightPixels
         } else {
              layoutParams.width = 1
              layoutParams.height = 1
